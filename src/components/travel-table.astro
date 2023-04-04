@@ -3,7 +3,7 @@ const { size } = Astro.props;
 const rows = typeof size === "undefined" ? 0 : size - 1;
 ---
 
-<div class="mb-2 text-xl"><slot /></div>
+<p class="mb-2 text-xl"><slot /></p>
 <table class="table-fixed w-full">
   <thead>
     <th class="w-3/12 border-b-standard border-r-standard border-current">From</th>

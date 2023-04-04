@@ -2,14 +2,15 @@
 import Underline from "./underline.astro";
 ---
 
-<div class="text-xl">Car rental</div>
-<div class="mt-2">
+<div class="space-y-2">
+  <p class="text-xl">Car rental</p>
   <Underline>Company:</Underline>
-</div>
-<div class="flex flex-row mt-2 space-x-6">
-  <div class="w-1/2">
-    <Underline>Pick-up:</Underline>
-  </div><div class="w-1/2">
-    <Underline>Drop-off:</Underline>
+  <div class="flex flex-row space-x-6">
+    <div class="w-1/2">
+      <Underline>Pick-up:</Underline>
+    </div>
+    <div class="w-1/2">
+      <Underline>Drop-off:</Underline>
+    </div>
   </div>
 </div>
