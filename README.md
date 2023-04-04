@@ -1,4 +1,3 @@
-
 # Itinerary Planner
 
 A simple printable itinerary planner to help organize trips
@@ -12,19 +11,19 @@ A simple printable itinerary planner to help organize trips
 - Organize activities
 - A little note section at the end
 
-
 ## Screenshots
 
 ![A view of the three pages](screenshot.png)
 
-
 ## Usage
 
 Using this is as simple as downloading the PDF from the [release section](https://github.com/Delta1925/itinerary-planner/releases) and printing it!
+
 ## Requirements
 
 - [PNPM](https://pnpm.io/)
 - [Node.js](https://nodejs.org/)
+
 ## Developing
 
 Clone the project
@@ -51,7 +50,6 @@ Start the dev server
 $  pnpm run dev
 ```
 
-
 ## Building
 
 As a website
@@ -68,7 +66,5 @@ $  pnpm run export      # Output: ./dist/export.pdf
 
 ## Acknowledgements
 
- - [Material Design Icons](https://github.com/Templarian/MaterialDesign)
- - [Convert Web Pages into PDF with Puppeteer and NodeJS](https://livecodestream.dev/post/convert-web-pages-into-pdfs-with-puppeteer-and-nodejs/)
- 
-
+- [Material Design Icons](https://github.com/Templarian/MaterialDesign)
+- [Convert Web Pages into PDF with Puppeteer and NodeJS](https://livecodestream.dev/post/convert-web-pages-into-pdfs-with-puppeteer-and-nodejs/)

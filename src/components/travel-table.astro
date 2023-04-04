@@ -6,11 +6,20 @@ const rows = typeof size === "undefined" ? 0 : size - 1;
 <p class="mb-2 text-xl"><slot /></p>
 <table class="table-fixed w-full">
   <thead>
-    <th class="w-3/12 border-b-standard border-r-standard border-current">From</th>
-    <th class="w-3/12 border-b-standard border-x-standard border-current">To</th>
-    <th class="w-2/12 border-b-standard border-x-standard border-current">Departure</th>
-    <th class="w-2/12 border-b-standard border-l-standard border-current">Arrival</th>
-    <th class="w-2/12 border-b-standard border-l-standard border-current">Code</th>
+    <th class="w-3/12 border-b-standard border-r-standard border-current"
+      >From</th
+    >
+    <th class="w-3/12 border-b-standard border-x-standard border-current">To</th
+    >
+    <th class="w-2/12 border-b-standard border-x-standard border-current"
+      >Departure</th
+    >
+    <th class="w-2/12 border-b-standard border-l-standard border-current"
+      >Arrival</th
+    >
+    <th class="w-2/12 border-b-standard border-l-standard border-current"
+      >Code</th
+    >
   </thead>
   {
     Array(rows)
@@ -28,7 +37,9 @@ const rows = typeof size === "undefined" ? 0 : size - 1;
       ))
   }
   <tr>
-    <td class="border-r-standard border-current invisible text-lg">Placeholder</td>
+    <td class="border-r-standard border-current invisible text-lg"
+      >Placeholder</td
+    >
     <td class="border-x-standard border-current"></td>
     <td class="border-x-standard border-current"></td>
     <td class="border-x-standard border-current"></td>
