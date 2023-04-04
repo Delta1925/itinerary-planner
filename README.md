@@ -10,6 +10,7 @@ A simple printable itinerary planner to help organize trips
 - Modular: Add as many destinations as you wish!
 - Manage car renting
 - Organize activities
+- A little note section at the end
 
 
 ## Screenshots
