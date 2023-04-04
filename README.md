@@ -69,5 +69,7 @@ $  pnpm run export      # Output: ./dist/export.pdf
 
 ## Acknowledgements
 
+- [Alkatra font](https://github.com/suman51284/Alkatra)
+- [Creating font subsets](https://markoskon.com/creating-font-subsets/)
 - [Material Design Icons](https://github.com/Templarian/MaterialDesign)
 - [Convert Web Pages into PDF with Puppeteer and NodeJS](https://livecodestream.dev/post/convert-web-pages-into-pdfs-with-puppeteer-and-nodejs/)
