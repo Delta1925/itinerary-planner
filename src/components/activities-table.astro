@@ -1,0 +1,31 @@
+---
+const { size } = Astro.props;
+const rows = typeof size === "undefined" ? 0 : size - 1;
+---
+
+<div class="mb-2 text-xl"><slot /></div>
+<table class="table-fixed w-full text-xs">
+  <thead>
+    <th class="w-1/6 border-bottom-standard border-right-standard">Time</th>
+    <th class="w-2/6 border-bottom-standard border-x-standard">Location</th>
+    <th class="w-3/6 border-bottom-standard border-left-standard">Notes</th>
+  </thead>
+  {
+    Array(rows)
+      .fill(null)
+      .map(() => (
+        <tr>
+          <td class="border-bottom-standard border-right-standard invisible text-lg">
+            Placeholder
+          </td>
+          <td class="border-bottom-standard border-x-standard" />
+          <td class="border-bottom-standard border-left-standard" />
+        </tr>
+      ))
+  }
+  <tr>
+    <td class="border-right-standard invisible text-lg">Placeholder</td>
+    <td class="border-x-standard"></td>
+    <td class="border-left-standard"></td>
+  </tr>
+</table>

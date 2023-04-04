@@ -1,0 +1,37 @@
+.border-bottom-standard, 
+.border-top-standard, 
+.border-right-standard, 
+.border-left-standard, 
+.border-x-standard, 
+.border-y-standard, 
+.border-standard {
+    @apply border-current
+}
+
+.border-bottom-standard {
+    @apply border-b-[0.3vw]
+}
+
+.border-top-standard {
+    @apply border-t-[0.3vw]
+}
+
+.border-right-standard {
+    @apply border-r-[0.3vw]
+}
+
+.border-left-standard {
+    @apply border-l-[0.3vw]
+}
+
+.border-x-standard {
+    @apply border-x-[0.3vw]
+}
+
+.border-y-standard {
+    @apply border-y-[0.3vw]
+}
+
+.border-standard {
+    @apply border-[0.3vw]
+}

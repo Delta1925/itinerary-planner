@@ -1,81 +1,65 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import ActivitiesTable from "../components/activities-table.astro";
+import Break from "../components/break.astro";
+import CarRental from "../components/car-rental.astro";
+import Hotel from "../components/hotel.astro";
+import Notes from "../components/notes.astro";
+import PrintPrompt from "../components/print-prompt.astro";
+import TravelTable from "../components/travel-table.astro";
+import Underline from "../components/underline.astro";
+
+import "../style/global.css";
+
+const main_trip_table_size = 5;
+const middle_trip_table_size = 3;
+const activity_table_size = 5;
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
-</Layout>
+<!DOCTYPE html>
+<html lang="en" class="text-[3vw]">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
 
-<style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
-</style>
+  <body class="font-mono font-bold text-sky-600 border-sky-600">
+    <PrintPrompt />
+
+    <div class="break-after-page p-4">
+      <h1 class="text-center text-4xl">Itinerary Planner</h1><Break />
+      <div class="flex flex-row space-x-6">
+        <div class="w-1/2">
+          <Underline>Depart:</Underline>
+        </div><div class="w-1/2">
+          <Underline>Return:</Underline>
+        </div>
+      </div><Break />
+      <TravelTable size={main_trip_table_size}>
+        Departing trip
+      </TravelTable><Break />
+      <CarRental /><Break />
+      <Hotel />
+    </div>
+
+    <div class="break-after-page p-4">
+      <ActivitiesTable size={activity_table_size}>
+        Activities
+      </ActivitiesTable><Break />
+      <TravelTable size={middle_trip_table_size}>Trip</TravelTable><Break />
+      <CarRental /><Break />
+      <Hotel />
+    </div>
+
+    <div class="p-4">
+      <ActivitiesTable size={activity_table_size}>
+        Activities
+      </ActivitiesTable><Break />
+      <TravelTable size={main_trip_table_size}>
+        Returning trip
+      </TravelTable><Break />
+      <Notes size={5} />
+    </div>
+  </body>
+</html>
