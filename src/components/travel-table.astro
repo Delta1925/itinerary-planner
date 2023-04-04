@@ -6,32 +6,32 @@ const rows = typeof size === "undefined" ? 0 : size - 1;
 <div class="mb-2 text-xl"><slot /></div>
 <table class="table-fixed w-full">
   <thead>
-    <th class="w-3/12 border-bottom-standard border-right-standard">From</th>
-    <th class="w-3/12 border-bottom-standard border-x-standard">To</th>
-    <th class="w-2/12 border-bottom-standard border-x-standard">Departure</th>
-    <th class="w-2/12 border-bottom-standard border-left-standard">Arrival</th>
-    <th class="w-2/12 border-bottom-standard border-left-standard">Code</th>
+    <th class="w-3/12 border-b-standard border-r-standard border-current">From</th>
+    <th class="w-3/12 border-b-standard border-x-standard border-current">To</th>
+    <th class="w-2/12 border-b-standard border-x-standard border-current">Departure</th>
+    <th class="w-2/12 border-b-standard border-l-standard border-current">Arrival</th>
+    <th class="w-2/12 border-b-standard border-l-standard border-current">Code</th>
   </thead>
   {
     Array(rows)
       .fill(null)
       .map(() => (
         <tr>
-          <td class="border-bottom-standard border-right-standard invisible text-lg">
+          <td class="border-b-standard border-r-standard border-current invisible text-lg">
             Placeholder
           </td>
-          <td class="border-bottom-standard border-x-standard" />
-          <td class="border-bottom-standard border-x-standard" />
-          <td class="border-bottom-standard border-x-standard" />
-          <td class="border-bottom-standard border-left-standard" />
+          <td class="border-b-standard border-x-standard border-current" />
+          <td class="border-b-standard border-x-standard border-current" />
+          <td class="border-b-standard border-x-standard border-current" />
+          <td class="border-b-standard border-l-standard border-current" />
         </tr>
       ))
   }
   <tr>
-    <td class="border-right-standard invisible text-lg">Placeholder</td>
-    <td class="border-x-standard"></td>
-    <td class="border-x-standard"></td>
-    <td class="border-x-standard"></td>
-    <td class="border-left-standard"></td>
+    <td class="border-r-standard border-current invisible text-lg">Placeholder</td>
+    <td class="border-x-standard border-current"></td>
+    <td class="border-x-standard border-current"></td>
+    <td class="border-x-standard border-current"></td>
+    <td class="border-l-standard border-current"></td>
   </tr>
 </table>
