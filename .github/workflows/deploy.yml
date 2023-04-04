@@ -20,6 +20,8 @@ jobs:
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v3
+      - name: Add base tag to astro config
+        run: sed -i 's/integrations/base: "\/itinerary-planner",\n  integrations/g' astro.config.mjs
       - name: Install, build, and upload your site
         uses: withastro/action@v0
         # with:
