@@ -1,7 +1,7 @@
 
 # Itinerary Planner
 
-A simple printable Itinerary planner to help organize trips
+A simple printable itinerary planner to help organize trips
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-green)
 
