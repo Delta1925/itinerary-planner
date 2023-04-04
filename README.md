@@ -17,7 +17,10 @@ A simple printable itinerary planner to help organize trips
 
 ## Usage
 
-Using this is as simple as downloading the PDF from the [release section](https://github.com/Delta1925/itinerary-planner/releases) and printing it!
+To get started, download the PDF from the [release section](https://github.com/Delta1925/itinerary-planner/releases) and print it!  
+If you have just one destination (e.g: Home -> Destination -> Home) you should only print the first and last page.  
+In order to add a second destination (e.g: Home -> Destination A -> Destination B -> Home), also print the second page.  
+For any further destination, print another copy of the second page and place it before the last page.
 
 ## Requirements
 
