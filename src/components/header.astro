@@ -1,8 +1,10 @@
 ---
 const { description, title, type, keywords } = Astro.props;
 
+const base_on_example_url = new URL(import.meta.env.BASE_URL, "https://example.com")
+
 function anchor(path: string) {
-    return new URL(path, Astro.site ? Astro.site : "http://127.0.0.1/").pathname
+    return new URL(path, base_on_example_url).pathname
 }
 ---
 
