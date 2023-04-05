@@ -1,5 +1,9 @@
 ---
 const { description, title, type, keywords } = Astro.props;
+
+function anchor(path: string) {
+    return new URL(path, Astro.site ? Astro.site : "http://127.0.0.1/").pathname
+}
 ---
 
 <meta charset="UTF-8" />
@@ -8,14 +12,14 @@ const { description, title, type, keywords } = Astro.props;
 
 <link rel="canonical" href={Astro.url} />
 
-<link rel="icon" href="favicon.svg" type="image/svg+xml" sizes="any" />
-<link rel="icon" href="favicon-64.png" type="image/png" sizes="64x64" />
-<link rel="icon" href="favicon-48.png" type="image/png" sizes="48x48" />
-<link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32" />
-<link rel="icon" href="favicon-16.png" type="image/png" sizes="16x16" />
+<link rel="icon" href={anchor("favicon.svg")} type="image/svg+xml" sizes="any" />
+<link rel="icon" href={anchor("favicon-64.png")} type="image/png" sizes="64x64" />
+<link rel="icon" href={anchor("favicon-48.png")} type="image/png" sizes="48x48" />
+<link rel="icon" href={anchor("favicon-32.png")} type="image/png" sizes="32x32" />
+<link rel="icon" href={anchor("favicon-16.png")} type="image/png" sizes="16x16" />
 
 <meta property="og:title" content={title ? title : "Itinerary planner"} />
-<meta property="og:image" content="favicon.svg" />
+<meta property="og:image" content={anchor("favicon.svg")} />
 <meta property="og:type" content={type ? type : "website"} />
 <meta property="og:url" content={Astro.url} />
 {description ? <meta property="og:description" content={description} /> : "" }
