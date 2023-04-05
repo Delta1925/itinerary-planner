@@ -25,11 +25,11 @@ jobs:
         id: configure
         uses: actions/configure-pages@v3.0.5
       - name: Add site tag to astro config
-        run: sed -i 's/integrations/site:\ "${{ steps.configure.outputs.origin }}",\n  integrations/g' astro.config.mjs
+        run: sed -i 's/integrations/site: "${{ steps.configure.outputs.origin }}",\n  integrations/g' astro.config.mjs
       - name: Add base tag to astro config
-        run: sed -i 's/integrations/base:\ "${{ steps.configure.outputs.base_path }}",\n  integrations/g' astro.config.mjs
+        run: sed -i 's/integrations/base: "${{ steps.configure.outputs.base_path }}",\n  integrations/g' astro.config.mjs
       - name: Add publicPath to critters config
-        run: sed -i 's/"swap"/"swap", publicPath:\ "\/itinerary-planner"/g' astro.config.mjs
+        run: sed -i 's/"swap"/"swap", publicPath: "${{ steps.configure.outputs.base_path }}"/g' astro.config.mjs
       - name: Install, build, and upload your site
         uses: withastro/action@v0
 
