@@ -2,6 +2,7 @@
 import ActivitiesTable from "../components/activities-table.astro";
 import Break from "../components/break.astro";
 import CarRental from "../components/car-rental.astro";
+import Header from "../components/header.astro";
 import Hotel from "../components/hotel.astro";
 import Notes from "../components/notes.astro";
 import PrintPrompt from "../components/print-prompt.astro";
@@ -18,19 +19,10 @@ const activity_table_size = 5;
 <!DOCTYPE html>
 <html lang="en" class="text-[3vw]">
   <head>
-    <link rel="icon" href="favicon.svg" type="image/svg+xml" sizes="any" />
-    <link rel="icon" href="favicon-64.png" type="image/png" sizes="64x64" />
-    <link rel="icon" href="favicon-48.png" type="image/png" sizes="48x48" />
-    <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32" />
-    <link rel="icon" href="favicon-16.png" type="image/png" sizes="16x16" />
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="A simple yet powerful itinerary planner to print."
+    <Header
+      description="A simple printable itinerary planner to help organize trips."
+      keywords="trip,travel,journey,planner,template,print,printable,open-source,oss,foss"
     />
-    <title>Itinerary planner</title>
   </head>
 
   <body class="font-sans font-bold text-sky-700 border-sky-700">
