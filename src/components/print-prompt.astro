@@ -2,7 +2,7 @@
 ---
 
 <div
-  class="hidden fixed bottom-1/2 right-1/2 translate-x-1/2 translate-y-1/2 bg-white drop-shadow-2xl flex-col space-y-4 border-standard border-current p-4 rounded-md text-center items-center"
+  class="invisible print:invisible fixed bottom-1/2 right-1/2 translate-x-1/2 translate-y-1/2 bg-white drop-shadow-2xl flex-col space-y-4 border-standard border-current p-4 rounded-md text-center items-center"
   id="controls"
 >
   <div class="flex flex-row space-x-4">
@@ -27,16 +27,13 @@
   const controls = document.getElementById("controls")!;
   const hide = document.getElementById("hide_prompt")!;
 
-  controls.classList.add("flex");
-  controls.classList.remove("hidden");
+  controls.classList.replace("invisible", "flex");
 
   print.addEventListener("click", () => {
-    controls.classList.add("hidden");
     window.print();
-    controls.classList.remove("hidden");
   });
 
   hide.addEventListener("click", () => {
-    controls.classList.add("hidden");
+    controls.classList.add("invisible");
   });
 </script>
