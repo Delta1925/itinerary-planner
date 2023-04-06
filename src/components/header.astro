@@ -1,10 +1,17 @@
 ---
 const { description, title, type, keywords } = Astro.props;
 
-const base_on_example_url = new URL(import.meta.env.BASE_URL, "https://example.com")
+const base_url = new URL(
+    import.meta.env.BASE_URL,
+    Astro.site ? Astro.site : Astro.url.origin
+);
 
 function anchor(path: string) {
-    return new URL(path, base_on_example_url).pathname
+    return new URL(path, base_url);
+}
+
+function canonical() {
+    return new URL(Astro.url.pathname, base_url);
 }
 ---
 
@@ -12,19 +19,44 @@ function anchor(path: string) {
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<link rel="canonical" href={Astro.url} />
+<link rel="canonical" href={canonical()} />
 
-<link rel="icon" href={anchor("favicon.svg")} type="image/svg+xml" sizes="any" />
-<link rel="icon" href={anchor("favicon-64.png")} type="image/png" sizes="64x64" />
-<link rel="icon" href={anchor("favicon-48.png")} type="image/png" sizes="48x48" />
-<link rel="icon" href={anchor("favicon-32.png")} type="image/png" sizes="32x32" />
-<link rel="icon" href={anchor("favicon-16.png")} type="image/png" sizes="16x16" />
+<link
+    rel="icon"
+    href={anchor("favicon.svg").pathname}
+    type="image/svg+xml"
+    sizes="any"
+/>
+<link
+    rel="icon"
+    href={anchor("favicon-64.png").pathname}
+    type="image/png"
+    sizes="64x64"
+/>
+<link
+    rel="icon"
+    href={anchor("favicon-48.png").pathname}
+    type="image/png"
+    sizes="48x48"
+/>
+<link
+    rel="icon"
+    href={anchor("favicon-32.png").pathname}
+    type="image/png"
+    sizes="32x32"
+/>
+<link
+    rel="icon"
+    href={anchor("favicon-16.png").pathname}
+    type="image/png"
+    sizes="16x16"
+/>
 
 <meta property="og:title" content={title ? title : "Itinerary planner"} />
 <meta property="og:image" content={anchor("og-image.jpg")} />
 <meta property="og:type" content={type ? type : "website"} />
-<meta property="og:url" content={Astro.url} />
-{description ? <meta property="og:description" content={description} /> : "" }
+<meta property="og:url" content={canonical()} />
+{description ? <meta property="og:description" content={description} /> : ""}
 <meta property="og:locale" content="en_US" />
 
 <title>{title ? title : "Itinerary planner"}</title>
