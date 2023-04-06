@@ -4,6 +4,7 @@ import Break from "../components/break.astro";
 import CarRental from "../components/car-rental.astro";
 import Header from "../components/header.astro";
 import Hotel from "../components/hotel.astro";
+import LinkGithub from "../components/link-github.astro";
 import Notes from "../components/notes.astro";
 import PrintPrompt from "../components/print-prompt.astro";
 import TravelTable from "../components/travel-table.astro";
@@ -25,7 +26,7 @@ const activity_table_size = 5;
     />
   </head>
 
-  <body class="font-sans font-bold text-sky-700 border-sky-700">
+  <body class="font-sans font-bold text-sky-700 border-sky-700 bg-white">
     <PrintPrompt />
 
     <div class="break-after-page">
@@ -61,6 +62,10 @@ const activity_table_size = 5;
         Return journey
       </TravelTable><Break />
       <Notes size={5} />
+      <Break /><Break />
+      <div class="w-full text-right inline-block">
+        <LinkGithub />
+      </div>
     </div>
   </body>
 </html>
