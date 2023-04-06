@@ -67,6 +67,13 @@ As a PDF
 $  pnpm run export      # Output: ./dist/export.pdf
 ```
 
+## Why?
+
+I was just curious to see if I could use a web page to design a PDF file.
+And since I had a bit more free time than usual, I decided to make a serious-looking project out of it, which turned out to be a fun way to improve my coding skills.
+
+To be clear: even though it may come in handy, this is not a serious project (obviously)
+
 ## Acknowledgements
 
 - [Alkatra font](https://github.com/suman51284/Alkatra)
