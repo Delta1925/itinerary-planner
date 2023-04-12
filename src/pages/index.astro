@@ -18,7 +18,7 @@ const activity_table_size = 5;
 ---
 
 <!DOCTYPE html>
-<html lang="en" class="text-[3vw]">
+<html lang="en" class="text-[2.9vw]">
   <head>
     <Header
       description="A simple printable itinerary planner to help organize trips."
@@ -29,7 +29,7 @@ const activity_table_size = 5;
   <body class="font-sans font-bold text-sky-700 border-sky-700 bg-white">
     <PrintPrompt />
 
-    <div class="break-after-page">
+    <div class="break-after-page m-10 print:m-0">
       <h1 class="text-center text-4xl">Itinerary Planner</h1><Break />
       <div class="flex flex-row space-x-6">
         <div class="w-1/2">
@@ -45,7 +45,7 @@ const activity_table_size = 5;
       <Hotel />
     </div>
 
-    <div class="break-after-page">
+    <div class="break-after-page m-10 print:m-0">
       <ActivitiesTable size={activity_table_size}>
         Activities
       </ActivitiesTable><Break />
@@ -54,7 +54,7 @@ const activity_table_size = 5;
       <Hotel />
     </div>
 
-    <div>
+    <div class="m-10 print:m-0">
       <ActivitiesTable size={activity_table_size}>
         Activities
       </ActivitiesTable><Break />
